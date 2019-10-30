@@ -5,8 +5,7 @@
 </head>
 <body>
 <div id="app">
-    <h1>hola </h1>
-  <example-component></example-component>
+    <pokemons-component></pokemons-component>
 </div>
 
 <script src="/js/app.js"></script>
