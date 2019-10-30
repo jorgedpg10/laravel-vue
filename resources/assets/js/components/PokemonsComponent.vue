@@ -22,16 +22,12 @@
         name: "PokemonsComponent",
         data(){
             return{
-                pokemons: [
-                    {id: 1, name:"Pikachu"},
-                    {id: 2, name:"Squirtle"},
-                    {id: 3, name:"Charizard"}
-                ]
+                pokemons: []
             }
         },
-        mounted() {
-            console.log('PokemonsComponent mounted');
-        }
+            mounted(){
+                axios.get('http://laravel-vue.test/pokemons').then(response => (this.pokemons = response.data));
+            }
     }
 </script>
 

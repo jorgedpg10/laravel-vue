@@ -49298,7 +49298,7 @@ exports = module.exports = __webpack_require__(47)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -49676,11 +49676,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     name: "PokemonsComponent",
     data: function data() {
         return {
-            pokemons: [{ id: 1, name: "Pikachu" }, { id: 2, name: "Squirtle" }, { id: 3, name: "Charizard" }]
+            pokemons: []
         };
     },
     mounted: function mounted() {
-        console.log('PokemonsComponent mounted');
+        var _this = this;
+
+        axios.get('http://laravel-vue.test/pokemons').then(function (response) {
+            return _this.pokemons = response.data;
+        });
     }
 });
 
