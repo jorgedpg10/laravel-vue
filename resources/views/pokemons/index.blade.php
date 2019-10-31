@@ -5,6 +5,7 @@
 </head>
 <body>
 <div id="app">
+
     <pokemons-component></pokemons-component>
 </div>
 
